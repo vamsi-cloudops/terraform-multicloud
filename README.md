@@ -169,7 +169,7 @@ module "dev_account" {
   source = "./modules/aws/account-vending"
 
   account_name      = "my-org-dev"
-  account_email     = "aws-dev@company.com"
+  account_email     = "aws-dev@example.com"
   organizational_unit = "ou-prod-workloads"
   
   baseline_config = {
@@ -250,8 +250,8 @@ module "ml_project" {
   ]
 
   iam_bindings = {
-    "roles/editor" = ["group:ml-team@company.com"]
-    "roles/viewer" = ["group:auditors@company.com"]
+    "roles/editor" = ["group:ml-team@example.com"]
+    "roles/viewer" = ["group:auditors@example.com"]
   }
 
   labels = {
